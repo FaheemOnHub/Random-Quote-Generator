@@ -24,3 +24,8 @@ quoteBtn.addEventListener("click", () => {
 copy.addEventListener("click", () => {
   navigator.clipboard.writeText(quoteText.innerText);
 });
+
+twitter.addEventListener("click", () => {
+  let tweetUrl = `https://twitter.com/intent/tweet?url=${quoteText.innerText}`;
+  window.open(tweetUrl, "_blank");
+});
